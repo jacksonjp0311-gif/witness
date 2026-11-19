@@ -15,3 +15,16 @@ Geometry:
   always fail open
 
 A foreign receipt is a prior. It is not an order.
+
+
+## Organism frame
+
+Witness is sensory only. It is not a deciding organism.
+
+Organs: observation, receipt.
+It reads the others. It scores. It decides nothing.
+No growth. No prune. No genome write. No self-edit.
+
+alive: false
+cell: false
+A receipt can cross. A verdict cannot. Witness writes no verdict.
