@@ -12,7 +12,39 @@ EXCHANGE = ROOT / "data" / "commons" / "exchange.jsonl"
 RECEIPT = ROOT / "data" / "commons" / "witness.jsonl"
 
 
+FEEDS = {
+    "colony": "https://raw.githubusercontent.com/jacksonjp0311-gif/agent-colony/main/data/commons/exchange.jsonl",
+    "one-mind": "https://raw.githubusercontent.com/jacksonjp0311-gif/one-mind/main/data/commons/exchange.jsonl",
+}
+
+
+def read_remote() -> dict:
+    """Fetch public exchanges. Unavailable is not zero."""
+    import urllib.request
+    out = {}
+    for name, url in FEEDS.items():
+        try:
+            with urllib.request.urlopen(url, timeout=12) as r:
+                lines = r.read().decode().splitlines()[-400:]
+            recs = []
+            for line in lines:
+                try:
+                    recs.append(json.loads(line))
+                except Exception:
+                    continue
+            out[name] = {"available": True, "records": recs, "n": len(recs)}
+        except Exception:
+            out[name] = {"available": False, "records": [], "n": 0}
+    return out
+
+
 def read_exchange() -> list:
+    remote = read_remote()
+    recs = []
+    for name, pack in remote.items():
+        recs.extend(pack["records"])
+    if recs:
+        return recs
     if not EXCHANGE.exists():
         return []
     out = []
