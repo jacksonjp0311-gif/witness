@@ -16,6 +16,7 @@ FEEDS = {
     "colony": "https://raw.githubusercontent.com/jacksonjp0311-gif/agent-colony/main/data/commons/exchange.jsonl",
     "one-mind": "https://raw.githubusercontent.com/jacksonjp0311-gif/one-mind/main/data/commons/exchange.jsonl",
 }
+FROZEN = "https://raw.githubusercontent.com/jacksonjp0311-gif/locus/main/data/commons/frozen.jsonl"
 
 
 def read_remote() -> dict:
@@ -62,6 +63,19 @@ def score(records: list) -> dict:
     return {"colony": colony, "one-mind": one_mind, "total": len(records)}
 
 
+def read_frozen() -> dict | None:
+    """Last Locus frozen receipt. Unavailable is None, not zero."""
+    import urllib.request
+    try:
+        with urllib.request.urlopen(FROZEN, timeout=12) as r:
+            lines = [ln for ln in r.read().decode().splitlines() if ln.strip()]
+        if not lines:
+            return None
+        return json.loads(lines[-1])
+    except Exception:
+        return None
+
+
 def append(rec: dict) -> None:
     if not rec:
         return
@@ -84,6 +98,15 @@ def cycle() -> dict:
     records = read_exchange()
     s = score(records)
     rec = {"source": "witness", "kind": "observation", **s}
+    frozen = read_frozen()
+    if isinstance(frozen, dict):
+        rec["frozen"] = {
+            "task": frozen.get("task"),
+            "kind": frozen.get("kind"),
+            "real_score": frozen.get("real_score"),
+            "sham_score": frozen.get("sham_score"),
+            "transfer": frozen.get("transfer"),
+        }
     append(rec)
     return rec
 
