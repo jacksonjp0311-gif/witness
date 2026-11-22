@@ -15,3 +15,4 @@
 {"source": "witness", "kind": "observation", "colony": 421, "one-mind": 379, "total": 800, "frozen": {"task": "ATGC", "kind": "reverse_complement", "real_score": 1.0, "sham_score": 0.0, "transfer": true}}
 {"source": "witness", "kind": "observation", "colony": 422, "one-mind": 378, "total": 800, "frozen": {"task": "ATGCCG", "kind": "rc_codon_length", "real_score": 1.0, "sham_score": 0.0, "transfer": true}}
 {"source": "witness", "kind": "observation", "colony": 408, "one-mind": 392, "total": 800, "frozen": {"task": "rc1", "kind": "open_queue", "real_score": 1.0, "sham_score": 0.0, "transfer": true}}
+{"source": "witness", "kind": "observation", "colony": 408, "one-mind": 392, "total": 800, "frozen": {"task": "rc1", "kind": "open_queue", "real_score": 1.0, "sham_score": 0.0, "transfer": true}}
