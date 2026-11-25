@@ -24,3 +24,4 @@
 {"source": "witness", "kind": "observation", "colony": 412, "one-mind": 388, "total": 800, "frozen": {"task": "rc2", "kind": "open_queue", "real_score": 1.0, "sham_score": 0.0, "transfer": true}}
 {"source": "witness", "kind": "observation", "colony": 415, "one-mind": 385, "total": 800, "frozen": {"task": "rc2", "kind": "open_queue", "real_score": 1.0, "sham_score": 0.0, "transfer": true}}
 {"source": "witness", "kind": "observation", "colony": 413, "one-mind": 387, "total": 800, "frozen": {"task": "rc2", "kind": "open_queue", "real_score": 1.0, "sham_score": 0.0, "transfer": true}}
+{"source": "witness", "kind": "observation", "colony": 421, "one-mind": 379, "total": 800, "frozen": {"task": "rc2", "kind": "open_queue", "real_score": 1.0, "sham_score": 0.0, "transfer": true}}
