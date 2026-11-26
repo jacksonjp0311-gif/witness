@@ -27,3 +27,4 @@
 {"source": "witness", "kind": "observation", "colony": 421, "one-mind": 379, "total": 800, "frozen": {"task": "rc2", "kind": "open_queue", "real_score": 1.0, "sham_score": 0.0, "transfer": true}}
 {"source": "witness", "kind": "observation", "colony": 420, "one-mind": 380, "total": 800, "frozen": {"task": "rc2", "kind": "open_queue", "real_score": 1.0, "sham_score": 0.0, "transfer": true}}
 {"source": "witness", "kind": "observation", "colony": 419, "one-mind": 381, "total": 800, "frozen": {"task": "rc2", "kind": "open_queue", "real_score": 1.0, "sham_score": 0.0, "transfer": true}}
+{"source": "witness", "kind": "observation", "colony": 419, "one-mind": 381, "total": 800, "frozen": {"task": "rc2", "kind": "open_queue", "real_score": 1.0, "sham_score": 0.0, "transfer": true}}
