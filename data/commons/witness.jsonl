@@ -31,3 +31,4 @@
 {"source": "witness", "kind": "observation", "colony": 424, "one-mind": 376, "total": 800, "frozen": {"task": "rc2", "kind": "open_queue", "real_score": 1.0, "sham_score": 0.0, "transfer": true}}
 {"source": "witness", "kind": "observation", "colony": 422, "one-mind": 378, "total": 800, "frozen": {"task": "rc2", "kind": "open_queue", "real_score": 1.0, "sham_score": 0.0, "transfer": true}}
 {"source": "witness", "kind": "observation", "colony": 418, "one-mind": 382, "total": 800, "frozen": {"task": "rc2", "kind": "open_queue", "real_score": 1.0, "sham_score": 0.0, "transfer": true}}
+{"source": "witness", "kind": "observation", "colony": 417, "one-mind": 383, "total": 800, "frozen": {"task": "rc2", "kind": "open_queue", "real_score": 1.0, "sham_score": 0.0, "transfer": true}}
